@@ -1,0 +1,11 @@
+Model Information:
+* title:	Amiga Days - Mario Star
+* source:	https://sketchfab.com/3d-models/amiga-days-mario-star-bb8b9d2e10d44eb18582be36c6db1142
+* author:	djesfr (https://sketchfab.com/djesfr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Amiga Days - Mario Star" (https://sketchfab.com/3d-models/amiga-days-mario-star-bb8b9d2e10d44eb18582be36c6db1142) by djesfr (https://sketchfab.com/djesfr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
