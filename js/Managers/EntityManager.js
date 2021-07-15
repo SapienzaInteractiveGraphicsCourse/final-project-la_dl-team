@@ -331,7 +331,7 @@ export class EntityManager{
     eliminateThisEntity(elem){
         var selectedObject = this._scene.getObjectByName(elem.name);
         selectedObject.parent.remove( selectedObject );
-        elem.body.position.set(-100, -100, -100);
+        elem.body.position.y = -100;
 
         var pos = elem.elemPos;
         this._entities.splice(pos, 1);
