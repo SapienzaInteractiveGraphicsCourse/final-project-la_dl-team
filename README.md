@@ -54,6 +54,7 @@ We also suggest to play the game in full screen (press `F11`)
 - `SPACE`: jump
 - `SHIFT`: run
 - `Mouse`: move the camera
+- `ESC`: pause
 
 </details>
 
@@ -63,6 +64,7 @@ We also suggest to play the game in full screen (press `F11`)
 - `SPACE`: go up
 - `SHIFT`: go down
 - `Mouse`: move the camera
+- `ESC`: pause
 
 </details>
 
