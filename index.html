@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario</title>
+    <link rel="icon" type="image/png" href="./resources/images/M.png"/>
+
+    <link rel="stylesheet" href="css/main.css">
+    <!--
+D:
+cd D:\programmi\VS Code\Programs\finalProject
+python -m http.server
+
+localhost:8000 
+    -->
+</head>
+<body>
+    <div id="menu">
+        <div id="logo" class="spacer">
+            <img id="MainLogo" src="./resources/images/SM.png">
+        </div>
+        <div id="MainButtons" class="spacer">
+            <div class="spacer">
+                <input id="startBTN" class="MSButton" type="button" value="START">
+            </div>
+            <div class="spacer">
+                <input id="flyBTN" class="MSButton" type="button" value="FLY MODE">
+            </div>
+            <div class="spacer">
+                <input id="settingsBTN" class="MSButton" type="button" value="SETTINGS">
+            </div>
+        </div>
+        <div id="commandsStart">
+            <h4 class="titleCommand">Commands:</h4>
+            <div><span class="keySpan">W A S D:</span><span class="textKeySpan"> directional movements</span></div>
+            <div><span class="keySpan">SPACE:</span><span class="textKeySpan"> jump</span></div>
+            <div><span class="keySpan">SHIFT:</span><span class="textKeySpan"> run</span></div>
+            <div><span class="keySpan">MOUSE:</span><span class="textKeySpan"> move camera</span></div>
+        </div>
+        <div id="commandsFlyMode">
+            <h4 class="titleCommand">Commands:</h4>
+            <div><span class="keySpan">W A S D:</span><span class="textKeySpan"> directional movements</span></div>
+            <div><span class="keySpan">SPACE:</span><span class="textKeySpan"> go up</span></div>
+            <div><span class="keySpan">SHIFT:</span><span class="textKeySpan"> go down</span></div>
+            <div><span class="keySpan">MOUSE:</span><span class="textKeySpan"> move camera</span></div>
+        </div>
+        <img id="SMF" src="./resources/images/SMFace.png">
+        <img id="SMFF" src="./resources/images/SMFFace.png">
+        <img id="SMMF" src="./resources/images/SMMFace.png">
+        <img id="Piranha" src="./resources/images/Piranha.png">
+    </div>
+
+    <div id="game">
+        <div id="loading">
+            <img id="SMGif" src="./resources/images/SMR.gif">
+            <div id="LoadingLetters">
+                <div id="divLL">
+                    <div class="ll">L</div>
+                    <div class="ll">o</div>
+                    <div class="ll">a</div>
+                    <div class="ll">d</div>
+                    <div class="ll">i</div>
+                    <div class="ll">n</div>
+                    <div class="ll">g</div>
+                    <div class="ll">.</div>
+                    <div class="ll">.</div>
+                    <div class="ll">.</div>
+                </div>
+            </div>
+        </div>
+        <div id="playGame">
+            <canvas id="canvas"></canvas>
+            <div id="GameValues">
+                <div class="ModeParamsDiv">
+                    <img class="logoMode" src="./resources/images/heartLogo.png">
+                    <span id="lifesSpanGame" class="spanLogoMode">lifes: 3</span>
+                </div>
+                <div class="ModeParamsDiv">
+                    <img class="logoMode" src="./resources/images/timerLogo.png">
+                    <span id="timeSpanGame" class="spanLogoMode">time: 3:00</span>
+                </div>
+                <div class="ModeParamsDiv">
+                    <img class="logoMode" src="./resources/images/starLogo.png">
+                    <span id="starsSpanGame" class="spanLogoMode">stars: 1</span>
+                </div>
+                <div class="ModeParamsDiv">
+                    <img class="logoMode" src="./resources/images/scoreLogo.png">
+                    <span id="scoreSpanGame" class="spanLogoMode">score: 0000</span>
+                </div>
+                <span id="writer"></span>
+            </div>
+            <div id="pauseGame">
+                <span>PAUSE</span>
+                <span>Click to continue</span>
+                <a href="./" id="gameBackMenu">🡸 Back to the Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings">
+        <div id="MainSett">
+            <span id="exitSettings">🡸 BACK</span>
+            <div class="settingElem">
+                <h1 class="titleElement">Select Difficulty:</h1>
+                <div class="insideDivElem">
+                    <span id="easyMode" class="easyMode">Easy</span>
+                    <span id="normalMode" class="normalMode">Normal</span>
+                    <span id="hardMode" class="hardMode">Hard</span>
+                </div>
+                <div id="ModeParams">
+                    <div class="ModeParamsDiv">
+                        <img class="logoMode" src="./resources/images/heartLogo.png">
+                        <span id="lifesSpan" class="spanLogoMode">lifes: 3</span>
+                    </div>
+                    <div class="ModeParamsDiv">
+                        <img class="logoMode" src="./resources/images/timerLogo.png">
+                        <span id="timeSpan" class="spanLogoMode">time: 3:00</span>
+                    </div>
+                    <div class="ModeParamsDiv">
+                        <img class="logoMode" src="./resources/images/starLogo.png">
+                        <span id="starsSpan" class="spanLogoMode">stars: 3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="settingElem">
+                <h1 class="titleElement">Select Day Time:</h1>
+                <div class="insideDivElem">
+                    <div class="oneDayTime">
+                        <img id="dayDayTime" class="imgDayTime" src="./resources/images/Day.png">
+                        <span id="" class="spanDayTime">Day</span>
+                    </div>
+                    <div class="oneDayTime">
+                        <img id="sunsetDayTime" class="imgDayTime" src="./resources/images/Sunset.png">
+                        <span id="" class="spanDayTime">Sunset</span>
+                    </div>
+                    <div class="oneDayTime">
+                        <img id="nightDayTime" class="imgDayTime" src="./resources/images/Night.png">
+                        <span id="" class="spanDayTime">Night</span>
+                    </div>
+                </div>
+            </div>
+            <div class="settingElem">
+                <h1 class="titleElement">Other settings:</h1>
+                <table id="otherSettingsTable">
+                    <tr>
+                        <td><span>Fov:</span></td>
+                        <td><span> 1 </span></td>
+                        <td><input id="sliderFov" class="sliderSetting" type="range" min="25" max="100" value="60" step="1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Far:</span></td>
+                        <td><span> 1 </span></td>
+                        <td><input id="sliderFar" class="sliderSetting" type="range" min="100" max="1000" value="1000" step="1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Mouse velocity:</span></td>
+                        <td><span> 1 </span></td>
+                        <td><input id="sliderMouseVel" class="sliderSetting" type="range" min="0.5" max="1.5" value="1" step="0.1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Music Volume:</span></td>
+                        <td><span> 0 </span></td>
+                        <td><input id="sliderMusicVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Mario Volume:</span></td>
+                        <td><span> 0 </span></td>
+                        <td><input id="sliderMarioVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Enviroment Volume:</span></td>
+                        <td><span> 0 </span></td>
+                        <td><input id="sliderEnviromentVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><span> 100</span></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <span>Allow Shadows:</span>
+                            <input id="shadowCkBox" type="checkbox" checked></span>
+                        </td>
+                        <td colspan="2">
+                            <span>Reduce Animations:</span>
+                            <input id="animationCkBox" type="checkbox"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <span>Allow NormalMap:</span>
+                            <input id="useNormalMap" type="checkbox" checked></span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="divBtnSettings">
+                    <span id="confirmSettings" class="btnSettings">Save changes</span>
+                    <span id="resetSettings" class="btnSettings">Reset settings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver">
+        <div id="winGame">
+            <span id="gameOverTitle" class="spanValue">Game Over</span>
+            <span id="gameOverResoult" class="spanName"></span>
+
+            <div id="gameOverStats">
+                <div class="divStats">
+                    <span class="spanName">Star collected: </span>
+                    <span id="statsSars" class="spanValue"></span>
+                </div>
+                <div class="divStats">
+                    <span class="spanName">Score: </span>
+                    <span id="statsScore" class="spanValue"></span>
+                </div>
+                <div class="divStats">
+                    <span class="spanName">Time: </span>
+                    <span id="statsTime" class="spanValue"></span>
+                </div>
+            </div>
+            
+            <a href="./" id="gameBackMenu2" class="MSButton">🡸 Back to the Menu</a>
+        </div>
+    </div>
+
+    <script src="js/cannon.js"></script>
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>
