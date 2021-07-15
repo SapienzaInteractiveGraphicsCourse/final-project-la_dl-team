@@ -778,7 +778,7 @@ class MapEnviroment {
     _getModel(path, child_name, scale=1.0) {
         const myPromise = new Promise((resolve, reject) => {
             const gltfLoader = new GLTFLoader();
-            gltfLoader.load("./resources/Models/" + path, (gltf) => {
+            gltfLoader.load("./resources/models/" + path, (gltf) => {
                 var mesh = gltf.scene.children.find((child) => child.name === child_name);
                 if (mesh == null)
                     mesh = gltf.scene;
