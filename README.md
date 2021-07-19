@@ -16,25 +16,24 @@ Final project for the course of Interactive Graphics 2020/2021.
 
 ## 📚 Libraries
 
-**THREE.js** [Link 🔗](https://threejs.org/) [[Documentation 🔗](https://threejs.org/docs/)]
-<br />
-Is a lightweight, cross-browser, easy to use, general purpose 3D library that use a WebGL renderer.
+-   **THREE.js** [Link 🔗](https://threejs.org/) [[Documentation 🔗](https://threejs.org/docs/)]
 
-**CANNON.js** [Link 🔗](https://schteppe.github.io/cannon.js/) [[Documentation 🔗](https://schteppe.github.io/cannon.js/docs/)]
-<br />
-Is a lightweight and simple 3D physics engine for the web.
+    Is a lightweight, cross-browser, easy to use, general purpose 3D library that use a WebGL renderer.
+
+-   **CANNON.js** [Link 🔗](https://schteppe.github.io/cannon.js/) [[Documentation 🔗](https://schteppe.github.io/cannon.js/docs/)]
+
+    Is a lightweight and simple 3D physics engine for the web.
 
 ## 🛠️ External tools
 
-Online Normal Map Generator [Link 🔗](https://cpetry.github.io/NormalMap-Online/)
-
-Models downloaded from sketchfab [Link 🔗](https://sketchfab.com/)
+-   Online Normal Map Generator [Link 🔗](https://cpetry.github.io/NormalMap-Online/)
+-   Models downloaded from sketchfab [Link 🔗](https://sketchfab.com/)
 
 ## 📜 Report
 
- report [Link 🔗](./Report.pdf)
- <br />
- In this file we write more about the code and the enviroment of our project.
+-   report [Link 🔗](./Report.pdf)
+
+    In this file we write more about the code and the enviroment of our project.
 
 ## 🌐 Browsers
 
