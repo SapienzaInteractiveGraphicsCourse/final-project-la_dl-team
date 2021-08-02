@@ -165,6 +165,16 @@ a{
     z-index: 26;
     position: absolute;
 }
+
+#loadingWorldName{
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: 2s bounce infinite;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
 #SMGif{
     margin-bottom: -20px;
     width: 235px;
@@ -175,6 +185,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
 }
 #divLL {
     display: flex;
@@ -533,3 +545,18 @@ a{
 .divStats{
     width: max-content;
 }
+
+
+
+@media (max-width: 800px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+    #MainLogo{
+        width: 250px;
+        height: 150px;
+    }
+
+    #commandsFlyMode, #SMF, #SMFF, #SMMF, #Piranha{
+        display: none;
+    }
+  }
