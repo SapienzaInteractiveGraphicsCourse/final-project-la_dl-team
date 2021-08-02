@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Mario</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-953418B8J2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-953418B8J2');
-    </script>
-    <link rel="icon" type="image/png" href="./resources/images/M.png"/>
+    <link rel="icon" type="image/png" href="./resources/images/M.png" />
+
     <link rel="stylesheet" href="css/main.css">
 </head>
+
+<!--
+    D:
+    cd D:\programmi\VS Code\Programs\IG-final_project_la_dl_team-main
+    python -m http.server
+
+    localhost:8000 
+-->
+
 <body>
     <div id="menu">
         <div id="logo" class="spacer">
@@ -43,7 +47,6 @@
             <div><span class="keySpan">W A S D:</span><span class="textKeySpan"> directional movements</span></div>
             <div><span class="keySpan">SPACE:</span><span class="textKeySpan"> go up</span></div>
             <div><span class="keySpan">SHIFT:</span><span class="textKeySpan"> go down</span></div>
-            <div><span class="keySpan">MOUSE:</span><span class="textKeySpan"> move camera</span></div>
             <div><span class="keySpan">ESC:</span><span class="textKeySpan"> pause</span></div>
         </div>
         <img id="SMF" src="./resources/images/SMFace.png">
@@ -54,6 +57,7 @@
 
     <div id="game">
         <div id="loading">
+            <span id="loadingWorldName"></span>
             <img id="SMGif" src="./resources/images/SMR.gif">
             <div id="LoadingLetters">
                 <div id="divLL">
@@ -89,7 +93,6 @@
                     <img class="logoMode" src="./resources/images/scoreLogo.png">
                     <span id="scoreSpanGame" class="spanLogoMode">score: 0000</span>
                 </div>
-                <span id="writer"></span>
             </div>
             <div id="pauseGame">
                 <span>PAUSE</span>
@@ -147,37 +150,43 @@
                     <tr>
                         <td><span>Fov:</span></td>
                         <td><span> 1 </span></td>
-                        <td><input id="sliderFov" class="sliderSetting" type="range" min="25" max="100" value="60" step="1"></td>
+                        <td><input id="sliderFov" class="sliderSetting" type="range" min="25" max="100" value="60"
+                                step="1"></td>
                         <td><span> 100</span></td>
                     </tr>
                     <tr>
                         <td><span>Far:</span></td>
                         <td><span> 1 </span></td>
-                        <td><input id="sliderFar" class="sliderSetting" type="range" min="100" max="1000" value="1000" step="1"></td>
+                        <td><input id="sliderFar" class="sliderSetting" type="range" min="100" max="1000" value="1000"
+                                step="1"></td>
                         <td><span> 100</span></td>
                     </tr>
                     <tr>
                         <td><span>Mouse velocity:</span></td>
                         <td><span> 1 </span></td>
-                        <td><input id="sliderMouseVel" class="sliderSetting" type="range" min="0.5" max="1.5" value="1" step="0.1"></td>
+                        <td><input id="sliderMouseVel" class="sliderSetting" type="range" min="0.5" max="1.5" value="1"
+                                step="0.1"></td>
                         <td><span> 100</span></td>
                     </tr>
                     <tr>
                         <td><span>Music Volume:</span></td>
                         <td><span> 0 </span></td>
-                        <td><input id="sliderMusicVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><input id="sliderMusicVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2"
+                                step="0.1"></td>
                         <td><span> 100</span></td>
                     </tr>
                     <tr>
                         <td><span>Mario Volume:</span></td>
                         <td><span> 0 </span></td>
-                        <td><input id="sliderMarioVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><input id="sliderMarioVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2"
+                                step="0.1"></td>
                         <td><span> 100</span></td>
                     </tr>
                     <tr>
                         <td><span>Enviroment Volume:</span></td>
                         <td><span> 0 </span></td>
-                        <td><input id="sliderEnviromentVolume" class="sliderSetting" type="range" min="0" max="1" value="0.2" step="0.1"></td>
+                        <td><input id="sliderEnviromentVolume" class="sliderSetting" type="range" min="0" max="1"
+                                value="0.2" step="0.1"></td>
                         <td><span> 100</span></td>
                     </tr>
 
@@ -227,13 +236,14 @@
                     <span id="statsTime" class="spanValue"></span>
                 </div>
             </div>
-            
+
             <a href="./" id="gameBackMenu2" class="MSButton">🡸 Back to the Menu</a>
         </div>
     </div>
 
     <script src="js/cannon.js"></script>
     <script type="module" src="js/main.js"></script>
-    
+
 </body>
+
 </html>
