@@ -42,6 +42,7 @@ Final project for the course of Interactive Graphics 2020/2021.
 |Edge|Good Performance|⭐⭐⭐|
 |Chrome|Good Performance on some computers|⭐⭐|
 |Firefox|Bad Performance|❌|
+|Safari|Bad Performance|❌|
 
 We also suggest to play the game in full screen (press `F11`)
 
